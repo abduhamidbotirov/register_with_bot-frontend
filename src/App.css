@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+  background: rgb(121, 16, 9);
+  background: linear-gradient(
+    120deg,
+    rgba(121, 16, 9, 1) 47%,
+    rgba(18, 2, 32, 1) 100%,
+    rgba(2, 0, 36, 0.8183648459383753) 100%
+  );
+}
+h2 {
+  font-size: 40px;
+  color: #f2f2ef;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #fffef9;
+}
+.wrapper_register {
+  width: 100%;
+  max-width: 450px;
+}
+.form {
+  margin-top: 30px;
+
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-group input {
+  width: 93%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  color: #e5e5f1;
+  background-color: #303346;
+}
+
+.form-group input::placeholder {
+  color: #e5e5f1;
+}
+.form-group input:focus {
+  outline: none;
+}
+.form input[type='text']:focus,
+.form input[type='text']::placeholder,
+.form select:focus {
+  outline: none;
+}
+
+/* Changing background color on autofill */
+.form input[type='text']:-webkit-autofill,
+.form input[type='text']:-webkit-autofill:hover,
+.form input[type='text']:-webkit-autofill:focus,
+.form input[type='text']:-webkit-autofill:active {
+  background-color: #303346;
+}
+
+/* Media query to prevent background color change */
+@media (prefers-reduced-motion: reduce) {
+  .form input[type='text'],
+  .form select,
+  .submit-button {
+    transition: none;
+  }
+}
+.form-group select:focus {
+  outline: none;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #303346;
+  font-weight: 700;
+  font-size: 16px;
+}
+.submit-button {
+  background-color: rgb(45, 170, 45);
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+@media (max-width: 450px) {
+  .wrapper_register {
+    padding: 10px;
+  }
+  .register-title {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .register_text {
+    color: white;
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  .form-group input {
+    padding: 10px;
+  }
+
+  .form-group select {
+    padding: 10px;
+    width: 98%;
+  }
+  .submit-button {
+    width: 98%;
+  }
+}
+/* Media query 300px va 400px oralig'idagi telefonlar uchun */
+@media only screen and (max-width: 400px) and (min-width: 301px) {
+  h2 {
+    font-size: 30px; /* Yoki o'zingizga mos keladigan o'lchamni tanlang */
+  }
+
+  p {
+    font-size: 16px; /* Yoki o'zingizga mos keladigan o'lchamni tanlang */
+  }
+
+  .form-group input,
+  .form-group select,
+  .submit-button {
+    font-size: 18px; /* Yoki o'zingizga mos keladigan o'lchamni tanlang */
+    padding: 10px; /* Yoki o'zingizga mos keladigan masofani tanlang */
+  }
+  .form-group input::placeholder {
+    color: #e5e5f1;
+    font-size: 12px !important;
+  }
+}
